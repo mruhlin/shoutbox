@@ -5,7 +5,7 @@ redis-server &
 cd comments-rest
 rails server -b 0.0.0.0 -p 3000 -e development &
 
-# deploy comments stream service on port 3001 TODO : more than one?
+# deploy comments stream service on port 3001
 cd ../comments-stream
 rails server Puma -b 0.0.0.0 -p 3001 -e production &
 

@@ -2,10 +2,12 @@
 
 one:
   user: MyString
+  email: my@em.ail
   body: MyText
   photo_id: MyString
 
 two:
   user: MyString
+  email: my@em.ail
   body: MyText
   photo_id: MyString

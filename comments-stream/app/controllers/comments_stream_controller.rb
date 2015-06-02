@@ -15,7 +15,6 @@ class CommentsStreamController < ActionController::Base
 
       channel_name = 'new-comment-' + url_hash
 
-      #redis = Redis.new
       @redis.subscribe(channel_name) do |on|
         on.message do |event, data|
           sse.write(data)

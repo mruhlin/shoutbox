@@ -17,7 +17,6 @@ class PhotoController < ActionController::Base
     FileUtils::mkdir_p File.dirname(path)
     File.open(path, "wb") { |f| f.write(photo.read) }
 
-    #TODO : error handling!
     msg = { :status => "ok", :id => id }
     render :json => msg
   end
