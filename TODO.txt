@@ -1,0 +1,10 @@
+TODO LIST
+- Refactor listener thread - DONE
+- Add varnish - DONE
+- basic UI - DONE 
+- photos - DONE
+- pretty UI - DONE?
+- widgetize - DONE
+- replace varnish with nginx
+- basic deployment script
+- delete superfluous files from repo derp

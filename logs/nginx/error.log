@@ -1,0 +1,64 @@
+2015/06/02 10:28:31 [notice] 38371#0: using the "kqueue" event method
+2015/06/02 10:28:31 [warn] 38371#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 10:28:31 [notice] 38371#0: nginx/1.8.0
+2015/06/02 10:28:31 [notice] 38371#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 10:28:31 [notice] 38371#0: OS: Darwin 14.3.0
+2015/06/02 10:28:31 [notice] 38371#0: hw.ncpu: 8
+2015/06/02 10:28:31 [notice] 38371#0: net.inet.tcp.sendspace: 131072
+2015/06/02 10:28:31 [notice] 38371#0: kern.ipc.somaxconn: 128
+2015/06/02 10:28:31 [notice] 38371#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 10:28:31 [notice] 38372#0: start worker processes
+2015/06/02 10:28:31 [notice] 38372#0: start worker process 38373
+2015/06/02 10:28:45 [error] 38373#0: *1 open() "/Users/mike/Dev/shoutbox/photo-service/public/photoUploads/photoUploads/126/0cb07472-0f8f-42b7-ae3f-52c29e35cbee.jpg" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /photoUploads/126/0cb07472-0f8f-42b7-ae3f-52c29e35cbee.jpg HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 10:29:15 [notice] 38372#0: signal 15 (SIGTERM) received, exiting
+2015/06/02 10:29:15 [notice] 38373#0: exiting
+2015/06/02 10:29:15 [notice] 38372#0: signal 23 (SIGIO) received
+2015/06/02 10:29:15 [notice] 38373#0: exit
+2015/06/02 10:29:15 [notice] 38372#0: signal 20 (SIGCHLD) received
+2015/06/02 10:29:15 [notice] 38372#0: worker process 38373 exited with code 0
+2015/06/02 10:29:15 [notice] 38372#0: exit
+2015/06/02 10:29:43 [notice] 38378#0: using the "kqueue" event method
+2015/06/02 10:29:43 [warn] 38378#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 10:29:43 [notice] 38378#0: nginx/1.8.0
+2015/06/02 10:29:43 [notice] 38378#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 10:29:43 [notice] 38378#0: OS: Darwin 14.3.0
+2015/06/02 10:29:43 [notice] 38378#0: hw.ncpu: 8
+2015/06/02 10:29:43 [notice] 38378#0: net.inet.tcp.sendspace: 131072
+2015/06/02 10:29:43 [notice] 38378#0: kern.ipc.somaxconn: 128
+2015/06/02 10:29:43 [notice] 38378#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 10:29:43 [notice] 38379#0: start worker processes
+2015/06/02 10:29:43 [notice] 38379#0: start worker process 38380
+2015/06/02 10:31:41 [info] 38380#0: *13 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:34:57 [info] 38380#0: *21 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:34:57 [info] 38380#0: *22 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:34:57 [info] 38380#0: *23 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:35:45 [error] 38380#0: *26 upstream timed out (60: Operation timed out) while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 10:35:45 [error] 38380#0: *19 upstream timed out (60: Operation timed out) while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 10:36:18 [info] 38380#0: *32 kevent() reported that client prematurely closed connection, so upstream connection is closed too while sending to client, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 10:36:54 [info] 38380#0: *38 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:36:54 [info] 38380#0: *39 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:36:54 [info] 38380#0: *40 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:36:59 [info] 38380#0: *37 kevent() reported that client prematurely closed connection, so upstream connection is closed too while sending request to upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 10:37:19 [info] 38380#0: *47 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:37:19 [info] 38380#0: *48 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:37:19 [info] 38380#0: *49 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:37:19 [info] 38380#0: *50 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 10:50:03 [notice] 38379#0: signal 15 (SIGTERM) received, exiting
+2015/06/02 10:50:03 [notice] 38380#0: exiting
+2015/06/02 10:50:03 [notice] 38379#0: signal 23 (SIGIO) received
+2015/06/02 10:50:03 [notice] 38380#0: exit
+2015/06/02 10:50:03 [notice] 38379#0: signal 20 (SIGCHLD) received
+2015/06/02 10:50:03 [notice] 38379#0: worker process 38380 exited with code 0
+2015/06/02 10:50:03 [notice] 38379#0: exit
+2015/06/02 10:52:03 [notice] 38472#0: using the "kqueue" event method
+2015/06/02 10:52:03 [warn] 38472#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 10:52:03 [notice] 38472#0: nginx/1.8.0
+2015/06/02 10:52:03 [notice] 38472#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 10:52:03 [notice] 38472#0: OS: Darwin 14.3.0
+2015/06/02 10:52:03 [notice] 38472#0: hw.ncpu: 8
+2015/06/02 10:52:03 [notice] 38472#0: net.inet.tcp.sendspace: 131072
+2015/06/02 10:52:03 [notice] 38472#0: kern.ipc.somaxconn: 128
+2015/06/02 10:52:03 [notice] 38472#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 10:52:03 [notice] 38473#0: start worker processes
+2015/06/02 10:52:03 [notice] 38473#0: start worker process 38474
+2015/06/02 10:52:55 [info] 38474#0: *1 kevent() reported that client 127.0.0.1 closed keepalive connection
