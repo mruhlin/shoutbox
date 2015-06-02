@@ -5,11 +5,17 @@ class Comment < ActiveRecord::Base
 
   after_create {|comment| comment.new_comment_message}
 
+  before_save :default_values
+  def default_values
+    self.url ||= 'http://www.unspecified.example'
+  end
+
   def new_comment_message
     msg = { resource: 'comments',
             id: self.id,
             obj: self }
 
-    $redis.publish 'new-comment', msg.to_json
+
+    $redis.publish 'new-comment-' + Digest::MD5.hexdigest(url), msg.to_json
   end
 end

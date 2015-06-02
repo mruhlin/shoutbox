@@ -5,8 +5,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.order('created_at DESC').all
-    #expires_in 3.minutes, :public => true
+    @comments = Comment.where(url: params['url']).order('created_at DESC').all
   end
 
   # GET /comments/1
@@ -43,6 +42,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:user, :email, :body, :photo_id)
+      params.require(:comment).permit(:user, :email, :body, :photo_id, :url)
     end
 end

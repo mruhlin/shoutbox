@@ -63,20 +63,20 @@ var emailInputStyle = {
 };
 
 // Widgets
-var ShoutBox = React.createClass({
+var ShoutBox = React.createClass({displayName: "ShoutBox",
     render: function(){
         var comments = [];
         for(var i=0; i<this.state.comments.length; i++){
-            comments.push(<Comment c={this.state.comments[i]} baseUrl={this.props.baseUrl}/>)
+            comments.push(React.createElement(Comment, {c: this.state.comments[i], baseUrl: this.props.baseUrl}))
         }
         return (
-            <div className="shoutBox" style={shoutBoxStyle}>
-                <div style={shoutBoxHeaderStyle}>Shout It Out</div>
-                <CommentForm baseUrl={this.props.baseUrl} addComment={this.addComment} onUrl={this.props.onUrl}/>
-                <div style={{overflowY:"scroll", height: "500px"}}>
-                    {comments}
-                </div>
-            </div>
+            React.createElement("div", {className: "shoutBox", style: shoutBoxStyle}, 
+                React.createElement("div", {style: shoutBoxHeaderStyle}, "Shout It Out"), 
+                React.createElement(CommentForm, {baseUrl: this.props.baseUrl, addComment: this.addComment, onUrl: this.props.onUrl}), 
+                React.createElement("div", {style: {overflowY:"scroll", height: "500px"}}, 
+                    comments
+                )
+            )
         );
     },
 
@@ -128,63 +128,63 @@ var ShoutBox = React.createClass({
     }
 });
 
-var Comment = React.createClass({
+var Comment = React.createClass({displayName: "Comment",
     render: function(){
         var img = "";
         if(this.props.c.photo_id){
             var photoUrl = this.props.baseUrl + "/photo?id=" + this.props.c.photo_id;
-            img = (<img src={photoUrl} style={{width: "100%", height: "auto:"}}/>);
+            img = (React.createElement("img", {src: photoUrl, style: {width: "100%", height: "auto:"}}));
         }
         return(
-            <div className="comment" style={commentStyle}>
-                <div style={userDisplayStyle}>Posted by <a style={userDisplayLinkStyle} href={"mailto:"+ this.props.c.email}>{this.props.c.user}</a></div>
-                {img}
-                <div style={commentBodyStyle}>{this.props.c.body}</div>
-            </div>
+            React.createElement("div", {className: "comment", style: commentStyle}, 
+                React.createElement("div", {style: userDisplayStyle}, "Posted by ", React.createElement("a", {style: userDisplayLinkStyle, href: "mailto:"+ this.props.c.email}, this.props.c.user)), 
+                img, 
+                React.createElement("div", {style: commentBodyStyle}, this.props.c.body)
+            )
         )
     }
 });
 
-var CommentForm = React.createClass({
+var CommentForm = React.createClass({displayName: "CommentForm",
     render: function(){
-        var addPhoto = (<input type="button" onClick={this.addPhoto} value="add a photo"></input>);
+        var addPhoto = (React.createElement("input", {type: "button", onClick: this.addPhoto, value: "add a photo"}));
         if(this.refs.photo){
             addPhoto = "Photo uploaded"
         }
 
         if(this.refs.needsPhoto){
             return(
-                <div className="commentForm">
-                    <Dropzone style={{width:"100%", height:"80px", border:"dashed"}} onDrop={this.onPhotoDrop}>Drag and drop a file, or just click</Dropzone>
-                </div>
+                React.createElement("div", {className: "commentForm"}, 
+                    React.createElement(Dropzone, {style: {width:"100%", height:"80px", border:"dashed"}, onDrop: this.onPhotoDrop}, "Drag and drop a file, or just click")
+                )
             );
         }
         else {
             return (
-                <div className="commentForm">
-                    <div style={userInfoInputStyle}>
-                        <div style={nameInputStyle}>
-                            <label>
-                                Name:
-                            </label>
-                            <input type="text" ref="user"/>
-                        </div>
-                        <div style={emailInputStyle}>
-                            <label>
-                                Email:
-                            </label>
-                            <input type="text" ref="email"/>
-                        </div>
-                        <br style={{clear: "both"}}/>
-                    </div>
-                    <div>
-                        <textarea ref="yourComment" style={textAreaStyle}/>
-                    </div>
-                    <div>
-                        <input type="button" ref="submit" value="submit" onClick={this.handleSubmit}/>
-                        {addPhoto}
-                    </div>
-                </div>
+                React.createElement("div", {className: "commentForm"}, 
+                    React.createElement("div", {style: userInfoInputStyle}, 
+                        React.createElement("div", {style: nameInputStyle}, 
+                            React.createElement("label", null, 
+                                "Name:"
+                            ), 
+                            React.createElement("input", {type: "text", ref: "user"})
+                        ), 
+                        React.createElement("div", {style: emailInputStyle}, 
+                            React.createElement("label", null, 
+                                "Email:"
+                            ), 
+                            React.createElement("input", {type: "text", ref: "email"})
+                        ), 
+                        React.createElement("br", {style: {clear: "both"}})
+                    ), 
+                    React.createElement("div", null, 
+                        React.createElement("textarea", {ref: "yourComment", style: textAreaStyle})
+                    ), 
+                    React.createElement("div", null, 
+                        React.createElement("input", {type: "button", ref: "submit", value: "submit", onClick: this.handleSubmit}), 
+                        addPhoto
+                    )
+                )
             );
         }
     },
@@ -265,11 +265,11 @@ window.fileUpload = function(url, file, callback){
 
 window.createShoutbox = function(baseUrl, id) {
     var url = location.href;
-    if($('meta[property="og:url"]').length){
+    if($('meta[property="og:url"]')){
         url = $('meta[property="og:url"]').attr("content");
     }
     React.render(
-        <ShoutBox baseUrl={baseUrl} onUrl={url}/>,
+        React.createElement(ShoutBox, {baseUrl: baseUrl, onUrl: url}),
         document.getElementById(id)
     )
 }
@@ -282,7 +282,7 @@ window.createShoutbox = function(baseUrl, id) {
 
 // Borrowed from https://github.com/paramaggarwal/react-dropzone
 
-var Dropzone = React.createClass({
+var Dropzone = React.createClass({displayName: "Dropzone",
     getDefaultProps: function() {
         return {
             supportClick: true,

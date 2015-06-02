@@ -10,8 +10,13 @@ class CommentsStreamController < ActionController::Base
       response.headers['Content-Type'] = 'text/event-stream'
       sse = SSE.new(response.stream, retry: 300, event:"newcomment")
 
+      url = params['url']
+      url_hash = Digest::MD5.hexdigest(url)
+
+      channel_name = 'new-comment-' + url_hash
+
       #redis = Redis.new
-      @redis.subscribe('new-comment') do |on|
+      @redis.subscribe(channel_name) do |on|
         on.message do |event, data|
           sse.write(data)
         end
