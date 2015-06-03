@@ -23,7 +23,8 @@ var ShoutBox = React.createClass({
         return {
             comments: [{
                 user: "Admin",
-                body: "Coments Are Loading..."
+                body: "Coments Are Loading...",
+                created_at: new Date()
             }]
         }
     },
@@ -74,15 +75,47 @@ var Comment = React.createClass({
             var photoUrl = this.props.baseUrl + "/photo?id=" + this.props.c.photo_id;
             img = (<img src={photoUrl} style={{width: "100%", height: "auto:"}}/>);
         }
+
+        var timestamp = new Date(this.props.c.created_at);
+
         return(
             <div className="comment" style={commentStyle}>
-                <div style={userDisplayStyle}>Posted by <a style={userDisplayLinkStyle} href={"mailto:"+ this.props.c.email}>{this.props.c.user}</a></div>
+                <div style={userDisplayStyle}>
+                    <a style={userDisplayLinkStyle} href={"mailto:"+ this.props.c.email}>{this.props.c.user}</a>
+                    , <Timestamp time={timestamp}/>
+                </div>
                 {img}
                 <div style={commentBodyStyle}>{this.props.c.body}</div>
             </div>
         )
     }
 });
+
+var Timestamp = React.createClass({
+    render: function(){
+        var pad = function(num){
+            if(num<10){
+                return "0" + num;
+            }
+            return "" + num;
+        };
+
+        var time = this.props.time;
+
+        var hours = pad(time.getHours()%12 || 12);
+        var minutes = pad(time.getMinutes());
+        var seconds = pad(time.getSeconds());
+
+        var year = pad(time.getFullYear());
+        var month = pad(time.getMonth()+1);
+        var day = pad(time.getDate());
+        return(
+            <span>
+                 on {year}-{month}-{day} at {hours}:{minutes}:{seconds}
+            </span>
+        );
+    }
+})
 
 var CommentForm = React.createClass({
     render: function(){
@@ -94,7 +127,9 @@ var CommentForm = React.createClass({
         if(this.refs.needsPhoto){
             return(
                 <div className="commentForm" style={commentFormStyle}>
-                    <Dropzone style={{width:"100%", height:"80px", border:"dashed"}} onDrop={this.onPhotoDrop}>Drag and drop a file, or just click</Dropzone>
+                    <Dropzone style={{width:"90%", height:"80px", border:"dashed"}} onDrop={this.onPhotoDrop}>
+                        Drag and drop a file, or just click
+                    </Dropzone>
                 </div>
             );
         }

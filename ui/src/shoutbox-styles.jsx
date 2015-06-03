@@ -1,4 +1,3 @@
-
 // Styles
 var shoutBoxStyle = {
     "fontFamily":'proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif',
@@ -30,7 +29,8 @@ var userDisplayStyle = {
 
 var userDisplayLinkStyle = {
     "color": "black",
-    "textDecoration": "none"
+    "textDecoration": "none",
+    "fontWeight": "bold"
 };
 
 var commentBodyStyle = {
