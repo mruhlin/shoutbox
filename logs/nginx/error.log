@@ -62,3 +62,133 @@
 2015/06/02 10:52:03 [notice] 38473#0: start worker processes
 2015/06/02 10:52:03 [notice] 38473#0: start worker process 38474
 2015/06/02 10:52:55 [info] 38474#0: *1 kevent() reported that client 127.0.0.1 closed keepalive connection
+2015/06/02 20:11:43 [emerg] 1034#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:11:43 [notice] 1034#0: try again to bind() after 500ms
+2015/06/02 20:11:43 [emerg] 1034#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:11:43 [notice] 1034#0: try again to bind() after 500ms
+2015/06/02 20:11:43 [emerg] 1034#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:11:43 [notice] 1034#0: try again to bind() after 500ms
+2015/06/02 20:11:43 [emerg] 1034#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:11:43 [notice] 1034#0: try again to bind() after 500ms
+2015/06/02 20:11:43 [emerg] 1034#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:11:43 [notice] 1034#0: try again to bind() after 500ms
+2015/06/02 20:11:43 [emerg] 1034#0: still could not bind()
+2015/06/02 20:17:03 [notice] 1110#0: using the "kqueue" event method
+2015/06/02 20:17:03 [warn] 1110#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 20:17:03 [notice] 1110#0: nginx/1.8.0
+2015/06/02 20:17:03 [notice] 1110#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 20:17:03 [notice] 1110#0: OS: Darwin 14.3.0
+2015/06/02 20:17:03 [notice] 1110#0: hw.ncpu: 8
+2015/06/02 20:17:03 [notice] 1110#0: net.inet.tcp.sendspace: 131072
+2015/06/02 20:17:03 [notice] 1110#0: kern.ipc.somaxconn: 128
+2015/06/02 20:17:03 [notice] 1110#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 20:17:03 [notice] 1111#0: start worker processes
+2015/06/02 20:17:03 [notice] 1111#0: start worker process 1112
+2015/06/02 20:17:19 [info] 1112#0: *3 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 20:17:19 [info] 1112#0: *2 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 20:17:21 [error] 1112#0: *6 client intended to send too large body: 1159021 bytes, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:17:48 [error] 1112#0: *7 client intended to send too large body: 1159021 bytes, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:18:10 [error] 1112#0: *8 client intended to send too large body: 2722758 bytes, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:18:15 [error] 1112#0: *1 upstream timed out (60: Operation timed out) while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:18:15 [error] 1112#0: *1 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:18:43 [crit] 1112#0: *1 open() "/usr/local/var/run/nginx/client_body_temp/0000000001" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:18:43 [error] 1112#0: *1 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:20:05 [info] 1112#0: *9 kevent() reported that client 127.0.0.1 closed keepalive connection
+2015/06/02 20:20:20 [crit] 1112#0: *11 open() "/usr/local/var/run/nginx/client_body_temp/0000000002" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:20:20 [error] 1112#0: *11 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:20:27 [crit] 1112#0: *12 open() "/usr/local/var/run/nginx/client_body_temp/0000000003" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:20:27 [error] 1112#0: *12 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:22:44 [info] 1112#0: *14 client closed connection while waiting for request, client: 127.0.0.1, server: 0.0.0.0:8002
+2015/06/02 20:22:46 [crit] 1112#0: *17 open() "/usr/local/var/run/nginx/client_body_temp/0000000004" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:22:46 [error] 1112#0: *17 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:23:39 [error] 1112#0: *13 upstream timed out (60: Operation timed out) while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:23:39 [error] 1112#0: *13 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:24:25 [notice] 1192#0: using the "kqueue" event method
+2015/06/02 20:24:25 [warn] 1192#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 20:24:25 [notice] 1192#0: nginx/1.8.0
+2015/06/02 20:24:25 [notice] 1192#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 20:24:25 [notice] 1192#0: OS: Darwin 14.3.0
+2015/06/02 20:24:25 [notice] 1192#0: hw.ncpu: 8
+2015/06/02 20:24:25 [notice] 1192#0: net.inet.tcp.sendspace: 131072
+2015/06/02 20:24:25 [notice] 1192#0: kern.ipc.somaxconn: 128
+2015/06/02 20:24:25 [notice] 1192#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 20:24:25 [notice] 1193#0: start worker processes
+2015/06/02 20:24:25 [notice] 1193#0: start worker process 1194
+2015/06/02 20:24:35 [crit] 1194#0: *2 open() "/usr/local/var/run/nginx/client_body_temp/0000000001" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:24:35 [error] 1194#0: *2 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:25:16 [error] 1194#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:25:16 [error] 1194#0: *1 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:25:50 [crit] 1194#0: *1 open() "/usr/local/var/run/nginx/client_body_temp/0000000002" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:25:50 [error] 1194#0: *1 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:26:49 [crit] 1194#0: *5 open() "/usr/local/var/run/nginx/client_body_temp/0000000003" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:26:49 [error] 1194#0: *5 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:28:06 [notice] 1296#0: using the "kqueue" event method
+2015/06/02 20:28:06 [warn] 1296#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 20:28:06 [notice] 1296#0: nginx/1.8.0
+2015/06/02 20:28:06 [notice] 1296#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 20:28:06 [notice] 1296#0: OS: Darwin 14.3.0
+2015/06/02 20:28:06 [notice] 1296#0: hw.ncpu: 8
+2015/06/02 20:28:06 [notice] 1296#0: net.inet.tcp.sendspace: 131072
+2015/06/02 20:28:06 [notice] 1296#0: kern.ipc.somaxconn: 128
+2015/06/02 20:28:06 [notice] 1296#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 20:28:06 [notice] 1297#0: start worker processes
+2015/06/02 20:28:06 [notice] 1297#0: start worker process 1298
+2015/06/02 20:28:15 [warn] 1298#0: *1 a client request body is buffered to a temporary file /usr/local/var/run/nginx/client_body_temp/0000000001, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:28:25 [error] 1298#0: *1 kevent() reported that connect() failed (61: Connection refused) while connecting to upstream, client: 127.0.0.1, server: localhost, request: "GET /comments.json?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3000/comments.json?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:28:25 [error] 1298#0: *1 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /comments.json?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3000/comments.json?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:29:18 [emerg] 1330#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:29:18 [notice] 1330#0: try again to bind() after 500ms
+2015/06/02 20:29:18 [emerg] 1330#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:29:18 [notice] 1330#0: try again to bind() after 500ms
+2015/06/02 20:29:18 [emerg] 1330#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:29:18 [notice] 1330#0: try again to bind() after 500ms
+2015/06/02 20:29:18 [emerg] 1330#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:29:18 [notice] 1330#0: try again to bind() after 500ms
+2015/06/02 20:29:18 [emerg] 1330#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:29:18 [notice] 1330#0: try again to bind() after 500ms
+2015/06/02 20:29:18 [emerg] 1330#0: still could not bind()
+2015/06/02 20:29:47 [info] 1298#0: *6 kevent() reported that client prematurely closed connection, so upstream connection is closed too while sending request to upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:30:36 [warn] 1298#0: *12 a client request body is buffered to a temporary file /usr/local/var/run/nginx/client_body_temp/0000000002, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:30:55 [error] 1298#0: *1 upstream timed out (60: Operation timed out) while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:30:55 [error] 1298#0: *9 upstream timed out (60: Operation timed out) while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:31:23 [warn] 1298#0: *12 a client request body is buffered to a temporary file /usr/local/var/run/nginx/client_body_temp/0000000003, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:32:47 [warn] 1298#0: *16 a client request body is buffered to a temporary file /usr/local/var/run/nginx/client_body_temp/0000000004, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:35:11 [notice] 1396#0: using the "kqueue" event method
+2015/06/02 20:35:11 [warn] 1396#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 20:35:11 [notice] 1396#0: nginx/1.8.0
+2015/06/02 20:35:11 [notice] 1396#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 20:35:11 [notice] 1396#0: OS: Darwin 14.3.0
+2015/06/02 20:35:11 [notice] 1396#0: hw.ncpu: 8
+2015/06/02 20:35:11 [notice] 1396#0: net.inet.tcp.sendspace: 131072
+2015/06/02 20:35:11 [notice] 1396#0: kern.ipc.somaxconn: 128
+2015/06/02 20:35:11 [notice] 1396#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 20:35:11 [notice] 1397#0: start worker processes
+2015/06/02 20:35:11 [notice] 1397#0: start worker process 1398
+2015/06/02 20:38:07 [notice] 1442#0: using the "kqueue" event method
+2015/06/02 20:38:07 [warn] 1442#0: 1024 worker_connections exceed open file resource limit: 256
+2015/06/02 20:38:07 [notice] 1442#0: nginx/1.8.0
+2015/06/02 20:38:07 [notice] 1442#0: built by clang 6.1.0 (clang-602.0.49) (based on LLVM 3.6.0svn)
+2015/06/02 20:38:07 [notice] 1442#0: OS: Darwin 14.3.0
+2015/06/02 20:38:07 [notice] 1442#0: hw.ncpu: 8
+2015/06/02 20:38:07 [notice] 1442#0: net.inet.tcp.sendspace: 131072
+2015/06/02 20:38:07 [notice] 1442#0: kern.ipc.somaxconn: 128
+2015/06/02 20:38:07 [notice] 1442#0: getrlimit(RLIMIT_NOFILE): 256:9223372036854775807
+2015/06/02 20:38:07 [notice] 1443#0: start worker processes
+2015/06/02 20:38:07 [notice] 1443#0: start worker process 1444
+2015/06/02 20:38:19 [warn] 1444#0: *4 a client request body is buffered to a temporary file /usr/local/var/run/nginx/client_body_temp/0000000001, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:39:16 [error] 1444#0: *1 upstream timed out (60: Operation timed out) while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:39:16 [error] 1444#0: *1 open() "/Users/mike/Dev/shoutbox/html/50x.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:41:08 [emerg] 1480#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:41:08 [notice] 1480#0: try again to bind() after 500ms
+2015/06/02 20:41:08 [emerg] 1480#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:41:08 [notice] 1480#0: try again to bind() after 500ms
+2015/06/02 20:41:08 [emerg] 1480#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:41:08 [notice] 1480#0: try again to bind() after 500ms
+2015/06/02 20:41:08 [emerg] 1480#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:41:08 [notice] 1480#0: try again to bind() after 500ms
+2015/06/02 20:41:08 [emerg] 1480#0: bind() to 0.0.0.0:8002 failed (48: Address already in use)
+2015/06/02 20:41:08 [notice] 1480#0: try again to bind() after 500ms
+2015/06/02 20:41:08 [emerg] 1480#0: still could not bind()
+2015/06/02 20:41:18 [warn] 1444#0: *6 a client request body is buffered to a temporary file /usr/local/var/run/nginx/client_body_temp/0000000002, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:42:33 [warn] 1444#0: *11 a client request body is buffered to a temporary file /usr/local/var/run/nginx/client_body_temp/0000000003, client: 127.0.0.1, server: localhost, request: "POST /photo HTTP/1.1", host: "localhost:8002", referrer: "http://localhost:8002/"
+2015/06/02 20:43:48 [error] 1444#0: *8 upstream timed out (60: Operation timed out) while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /stream/?url=http%3A%2F%2Flocalhost%3A8002%2F HTTP/1.1", upstream: "http://127.0.0.1:3001/stream/?url=http%3A%2F%2Flocalhost%3A8002%2F", host: "localhost:8002", referrer: "http://localhost:8002/"
