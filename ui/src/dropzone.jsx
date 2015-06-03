@@ -1,5 +1,3 @@
-
-
 // Borrowed from https://github.com/paramaggarwal/react-dropzone
 
 var Dropzone = React.createClass({

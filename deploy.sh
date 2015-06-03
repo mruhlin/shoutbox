@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # start redis
 redis-server &
 
